@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trace It Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div id="welcome-container" class="section">
+        <h1>Welcome to Trace It! 🌟</h1>
+        <h2>Your adventure awaits. Take the quiz to discover your perfect major! 🏆</h2>
+        <form id="welcome-form">
+            <p><label for="number">LRN:</label> <input type="Number" id="number" placeholder="0000000000000"  required></p>
+            <p class="gender-options">
+            <p><label for="name">Name:</label> <input type="text" id="name" placeholder="Enter your name" required></p>
+            <p class="gender-options">
+                Gender: 👤
+                <label><input type="radio" name="gender" value="Male" required> <i class="fa fa-male"></i> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> <i class="fa fa-female"></i> Female</label>
+            </p>
+            <button type="button" onclick="startGame()">Start the Quiz 🚀</button>
+        </form>
+    </div>
+
+    <div id="quiz-container" style="display: none;">
+        <h1 class="quiz-header">Quest Ascend Quiz 🤔</h1>
+        <h2 id="question"></h2>
+        <div id="choices" class="choices"></div>
+        <p>Question <span id="current-question">1</span> of <span id="total-questions"></span></p>
+        <button id="next-btn" onclick="nextQuestion()" disabled>Next ➡️</button>
+    </div>
+
+    <div id="results-container" style="display: none;">
+        <h1>Results 🏅</h1>
+        <p id="score"></p>
+        <p id="recommendation"></p>
+        <button onclick="restartQuiz()">Restart 🔄</button>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
